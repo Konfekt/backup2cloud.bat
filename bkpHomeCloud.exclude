@@ -1,0 +1,51 @@
+# General Temporary Data
+-p *.bak
+-p *.bkp
+
+-p *.swp
+
+-p *.tmp
+-p tmp/
+-p temp/
+
+-p cache/
+
+# Logs
+
+-p *.log
+-p log/
+-p logs/
+
+# Office Temp Data
+-p ~$*
+
+# Sensitive Data
+/AppData/Roaming/Thunderbird/Profiles/*/cert8.db
+/AppData/Roaming/Thunderbird/Profiles/*/key3.db
+/AppData/Roaming/Thunderbird/Profiles/*/signons.sqlite
+/AppData/Roaming/Thunderbird/Profiles/*/logins.json
+
+/AppData/Roaming/mozilla/Firefox/Profiles/*/logins.json
+/AppData/Roaming/mozilla/Firefox/Profiles/*/cert8.db
+/AppData/Roaming/mozilla/Firefox/Profiles/*/key3.db
+
+/AppData/Local/Chromium/User Data/Profile [1-9]/Login Data/
+/AppData/Local/Chromium/User Data/Profile [1-9]/Login Data-journal
+
+/AppData/Roaming/Ditto/*.db
+/AppData/Roaming/Microsoft/Credentials/
+
+# Redundant Data
+/AppData/Roaming/Thunderbird/Profiles/*/ImapMail/
+
+/Application Data/GoldenDict/index/
+
+/AppData/Roaming/mozilla/Firefox/Crash Reports/
+/AppData/Roaming/mozilla/Firefox/Profiles/*/crashes/
+/AppData/Roaming/mozilla/Firefox/Profiles/*/datareporting/
+/AppData/Roaming/Thunderbird/Crash Reports/
+/AppData/Roaming/Thunderbird/Profiles/*/crashes/
+
+/AppData/Local/Chromium/User Data/Profile 1/Extensions/
+/AppData/Local/Chromium/User Data/Profile [1-9]/*/
+
