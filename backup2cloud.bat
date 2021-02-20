@@ -5,13 +5,13 @@ REM ----------- BEGIN CONFIGURATION -----
 set FROM_FOLDER=%USERPROFILE%
 set TO_FOLDER=REMOTE_USER@SERVER:REMOTE_PATH
 
-set FILES_FILE=%FROM_FOLDER%\.config\backups\cloud\bkpHomeCloud.files
-set INCLUDE_FILE=%FROM_FOLDER%\.config\backups\cloud\bkpHomeCloud.include
-set EXCLUDE_FILE=%FROM_FOLDER%\.config\backups\cloud\bkpHomeCloud.exclude
-set LOG_FILE=%FROM_FOLDER%\.cache\backups\bkpHomeCloud.log
+set FILES_FILE=%FROM_FOLDER%\.config\backups\cloud\backup2cloud.files
+set INCLUDE_FILE=%FROM_FOLDER%\.config\backups\cloud\backup2cloud.include
+set EXCLUDE_FILE=%FROM_FOLDER%\.config\backups\cloud\backup2cloud.exclude
+set LOG_FILE=%FROM_FOLDER%\.cache\backups\backup2cloud.log
 
 REM NOTE: --files-from disables --recursive in --archive, thus enable explicitly
-SET RSYNC_BKP_ARGS=--recursive --archive --hard-links --ignore-errors --delete --compress --partial --human-readable --info=progress2
+SET RSYNC_BKP_ARGS=--recursive --archive --hard-links --ignore-errors --modify-window=1 --delete --compress --partial --human-readable --info=progress2
 
 call :DOS2UNIX %USERPROFILE% HOME_UNIX
 SET SSH_ARGS=-F %HOME_UNIX%/.ssh/config -i %HOME_UNIX%/.ssh/id_rsa -o UserKnownHostsFile=%HOME_UNIX%/.ssh/known_hosts

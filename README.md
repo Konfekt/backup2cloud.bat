@@ -1,9 +1,9 @@
 This is a `Microsoft Windows` batch script that backs up
 
-- all those files and folders in the home folder `%USERPROFILE%` that are listed in `./bkpHome2Cloud.files`,
-- except those listed in `./bkpHome2Cloud.exclude`
+- all those files and folders in a source folder (that defaults to the home folder `%USERPROFILE%`) that are listed in `./backup2cloud.files`,
+- except those listed in `./backup2cloud.exclude`
 
-via `rsync` to a remote server.
+via `rsync` to a destination folder on a remote server.
 
 # Installation
 
@@ -16,12 +16,12 @@ via `rsync` to a remote server.
     ```sh
     copy %USERPROFILE%\Downloads\backup2cloud.bat\backup2cloud.bat %USERPROFILE%\bin\
     ```
-0. Copy `.\bkpHome2Cloud.files` and  `.\bkpHome2Cloud.exclude` to `%USERPROFILE%\.config\backups\cloud` by
+0. Copy `.\backup2cloud.files` and  `.\backup2cloud.exclude` to `%USERPROFILE%\.config\backups\cloud` by
     ```sh
     cd %USERPROFILE%\Downloads\backup2cloud.bat
     md %USERPROFILE%\.config\backups\cloud
-    cp .\bkpHome2Cloud.files %USERPROFILE%\.config\backups\cloud\
-    cp .\bkpHome2Cloud.exclude %USERPROFILE%\.config\backups\cloud\
+    cp .\backup2cloud.files %USERPROFILE%\.config\backups\cloud\
+    cp .\backup2cloud.exclude %USERPROFILE%\.config\backups\cloud\
     ```
     and adapt the files and folders listed in them to those that suit you.
 0. Inside `backup2cloud.bat`, replace
